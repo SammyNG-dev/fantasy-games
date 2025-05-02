@@ -1,5 +1,5 @@
 import facebook from "../assets/images/facebook.png";
-
+import x from "../assets/images/twitter.png"
 function Footer() {
   return (
     <footer className="footer">
@@ -9,7 +9,7 @@ function Footer() {
           <img id="facebook" src={facebook} alt="facebook" />
         </a>
         <a href="https://x.com/">
-          <img id="twitter" src="src/assets/images/twitter.png" alt="twitter" />
+          <img id="twitter" src={x} alt="twitter" />
         </a>
       </div>
     </footer>
