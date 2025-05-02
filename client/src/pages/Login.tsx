@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import "../components/Login.css";
 import successSound from "/src/assets/final-fantasy-vii-victory-fanfare-1.mp3"; // Import du fichier audio
 import vnpp_gandalf from "/src/assets/vnpp_gandalf.mp3";
-
 import login from "../assets/images/login.png"
 import dragon_offline from "../assets/images/dragon_offline.png"
 import dragon_online from "../assets/images/dragon_online.png"
@@ -16,6 +15,7 @@ const usersData = [
 ];
 
 function Login() {
+
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [isOnline, setIsOnline] = useState<boolean>(false);
@@ -40,14 +40,14 @@ function Login() {
         alert("Connection successfull !");
         navigate("/games");
       } else {
-        const gandalf = new Audio(vnpp_gandalf);
-        gandalf.play();
-        alert("Incorrect username or password");
+        alert("Username : Samy\nPassword : Samy123")
       }
     } else {
-      alert("Please complete all fields");
+      alert("Username : Samy\nPassword : Samy123")
     }
   };
+
+  
 
   return (
     <div className="div-form">
