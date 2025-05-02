@@ -4,6 +4,10 @@ import "../components/Login.css";
 import successSound from "/src/assets/final-fantasy-vii-victory-fanfare-1.mp3"; // Import du fichier audio
 import vnpp_gandalf from "/src/assets/vnpp_gandalf.mp3";
 
+import login from "../assets/images/login.png"
+import dragon_offline from "../assets/images/dragon_offline.png"
+import dragon_online from "../assets/images/dragon_online.png"
+
 const usersData = [
   { username: "Samy", password: "Samy123" },
   { username: "Eric", password: "Eric123" },
@@ -55,6 +59,7 @@ function Login() {
           className="username"
           placeholder="Your username"
           value={username}
+          defaultValue="Samy"
           onChange={(e) => setUsername(e.target.value)}
         />
         <h2>Password</h2>
@@ -63,12 +68,13 @@ function Login() {
           className="password"
           placeholder="Your password"
           value={password}
+          defaultValue="Samy123"
           onChange={(e) => setPassword(e.target.value)}
         />
         <button className="button-login" type="submit">
           <img
             className="login-logo"
-            src="src/assets/images/login.png"
+            src={login}
             alt="Logo de connexion"
           />
         </button>
@@ -77,13 +83,13 @@ function Login() {
       <div className="status">
         {isOnline ? (
           <div id="online-status">
-            <img src="src\assets\images\dragon_online.png" alt="dragon_vert" />
+            <img src={dragon_online} alt="dragon_vert" />
             <p>Online</p>
           </div>
         ) : (
           <div id="offline-status">
             <img
-              src="src\assets\images\dragon_offline.png"
+              src={dragon_offline}
               alt="dragon_rouge"
             />
             <p>Offline</p>
