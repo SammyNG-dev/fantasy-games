@@ -1,5 +1,6 @@
 import clickSound from "/src/assets/chocobo_wark.mp3";
 import { useFavoritesGames } from "../contexts/FavoritesGamesContext";
+import unlike from "../assets/images/Unlike.png"
 
 interface GameProps {
   game: {
@@ -56,7 +57,7 @@ const CardGame = ({ game }: GameProps) => {
           }}
         >
           <div>
-            <img src="src\assets\images\Unlike.png" alt="Unlike" />
+            <img src={unlike} alt="Unlike" />
           </div>
         </button>
       </div>
