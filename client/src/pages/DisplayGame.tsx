@@ -2,6 +2,7 @@ import { useState } from "react";
 import clickSound from "/src/assets/chocobo_wark.mp3"; // Import du fichier audio
 import { useFavoritesGames } from "../contexts/FavoritesGamesContext";
 import { useGames } from "../contexts/GamesContext";
+import back from "../assets/images/Retour.png"
 
 const DisplayGame = ({ selectedGameId }: { selectedGameId: number }) => {
   const { games, setSelectedGameId } = useGames();
@@ -33,7 +34,7 @@ const DisplayGame = ({ selectedGameId }: { selectedGameId: number }) => {
   return (
     <div className="display-game">
       <button id="return" type="button" onClick={() => setSelectedGameId(null)}>
-        <img src="src\assets\images\Retour.png" alt="Return" />
+        <img src={back} alt="Return" />
       </button>
       <div className="game-details">
         <h2>{displayedGame.title}</h2>

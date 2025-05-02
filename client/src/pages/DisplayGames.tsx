@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useGames } from "../contexts/GamesContext";
 import DisplayGame from "./DisplayGame";
+import previous from "../assets/images/Précédent.png"
+import next from "../assets/images/Suivant.png"
 
 const DisplayGames = () => {
   const { games, selectedGameId, setSelectedGameId, isLoading, error } =
@@ -65,10 +67,10 @@ const DisplayGames = () => {
       </div>
       <div className="button">
         <button id="button-left" type="button" onClick={onPrevious}>
-          <img src="src\assets\images\Précédent.png" alt="Forward" />
+          <img src={previous} alt="Forward" />
         </button>
         <button id="button-right" type="button" onClick={onNext}>
-          <img src="src\assets\images\Suivant.png" alt="Next" />
+          <img src={next} alt="Next" />
         </button>
       </div>
     </div>
