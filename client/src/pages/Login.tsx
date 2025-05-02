@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../components/Login.css";
 import successSound from "/src/assets/final-fantasy-vii-victory-fanfare-1.mp3"; // Import du fichier audio
-import vnpp_gandalf from "/src/assets/vnpp_gandalf.mp3";
 import login from "../assets/images/login.png"
 import dragon_offline from "../assets/images/dragon_offline.png"
 import dragon_online from "../assets/images/dragon_online.png"
