@@ -57,7 +57,6 @@ function Login() {
         <input
           type="text"
           className="username"
-          placeholder="Your username"
           value={username}
           defaultValue="Samy"
           onChange={(e) => setUsername(e.target.value)}
@@ -66,7 +65,6 @@ function Login() {
         <input
           type="password"
           className="password"
-          placeholder="Your password"
           value={password}
           defaultValue="Samy123"
           onChange={(e) => setPassword(e.target.value)}
