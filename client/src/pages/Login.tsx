@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../components/Login.css";
-import successSound from "/src/assets/final-fantasy-vii-victory-fanfare-1.mp3"; // Import du fichier audio
-import login from "../assets/images/login.png"
 import dragon_offline from "../assets/images/dragon_offline.png"
 import dragon_online from "../assets/images/dragon_online.png"
+import login from "../assets/images/login.png"
 
 const usersData = [
   { username: "Samy", password: "Samy123" },
@@ -33,8 +32,6 @@ function Login() {
 
     if (username && password) {
       if (validateCredentials(username, password)) {
-        const audio = new Audio(successSound); // Crée une nouvelle instance Audio
-        audio.play(); // Joue le son
         setIsOnline(!isOnline);
         alert("Connection successfull !");
         navigate("/games");

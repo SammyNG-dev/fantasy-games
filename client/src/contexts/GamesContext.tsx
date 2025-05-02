@@ -41,12 +41,8 @@ export const GamesProvider: React.FC<{ children: React.ReactNode }> = ({
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-const url = 'https://api.allorigins.win/get?url=' + encodeURIComponent('https://www.mmobomb.com/api1/filter?tag=3d.mmorpg.fantasy.pvp&platform=pc');
-
   useEffect(() => {
-    fetch(
-      url
-    )
+    fetch("https://cors-proxy-1au9.onrender.com/games")
       .then((response) => response.json())
       .then((data) => {
         if (Array.isArray(data)) {
